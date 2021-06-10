@@ -1,0 +1,35 @@
+android_app_import {
+    name: "Styles",
+    owner: "motorola",
+    apk: "proprietary/system_ext/priv-app/Styles/Styles.apk",
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    required: [
+        "MotoSignatureApp",
+        "afw-styles",
+        "privapp-permissions-styles",
+    ],
+    system_ext_specific: true,
+}
+
+prebuilt_etc {
+    name: "afw-styles",
+    owner: "motorola",
+    sub_dir: "permissions",
+    src: "proprietary/system_ext/etc/permissions/afw-styles.xml",
+    filename_from_src: true,
+    system_ext_specific: true,
+}
+
+prebuilt_etc {
+    name: "privapp-permissions-styles",
+    owner: "motorola",
+    sub_dir: "sysconfig",
+    src: "proprietary/system_ext/etc/permissions/privapp-permissions-styles.xml",
+    filename_from_src: true,
+    system_ext_specific: true,
+}
+
